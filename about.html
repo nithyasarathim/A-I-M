@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Insights & Mentoring</title>
-    
+
     <!-- Link to Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* General styles */
+        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f8ff;
+            background: linear-gradient(to right, #f0f8ff, #e6f7ff); /* Subtle gradient */
             color: #2b2d42;
             margin: 0;
             padding: 20px;
             line-height: 1.7;
         }
 
-        /* Styling for the container */
+        /* Container styling */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -27,6 +27,15 @@
             background-color: #ffffff;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
@@ -43,7 +52,7 @@
         }
 
         .section-title {
-            color: #3a86ff; /* Replaced pink with a cool blue */
+            color: #3a86ff;
             font-weight: 600;
             font-size: 1.6em;
             margin-top: 50px;
@@ -61,14 +70,70 @@
             font-size: 1.1em;
         }
 
+        /* Images */
         img {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Media Queries for responsiveness */
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Call-to-action button */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2em;
+            margin: 30px auto;
+            display: block;
+            width: 200px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4d4d;
+            transform: translateY(-3px);
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #f8f9fa;
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .testimonial span {
+            display: block;
+            font-weight: 600;
+            color: #4a90e2;
+            margin-top: 10px;
+        }
+
+        /* Media Queries */
         @media (max-width: 768px) {
             body {
                 padding: 15px;
@@ -114,35 +179,42 @@
     <div class="container">
         <h1>Academic Insights & Mentoring</h1>
 
-        <!-- Added an example image (you can replace with your own) -->
+        <!-- Image -->
         <img src="https://via.placeholder.com/1000x500.png?text=Academic+Mentorship+Image" alt="Academic Mentorship">
 
-        <p>Welcome to Academic Insights & Mentoring (AIM), a revolutionary platform dedicated to nurturing the next generation of tech leaders. Our platform is built to empower students by guiding them in improving their technical and problem-solving skills through coding, career insights, and real-world mentorship.</p>
-        
-        <p>At AIM, we believe in a holistic approach to career development, combining competitive coding platforms, personalized AI recommendations, and mentorship programs to unlock each student's potential.</p>
+        <p>Welcome to Academic Insights & Mentoring (AIM), a platform designed to guide and mentor students in their academic and career journeys. Our goal is to create a supportive community that nurtures growth through competition, career guidance, and alumni mentorship.</p>
 
         <div class="section-title">Our Vision</div>
-        <p>Our vision is to create a community where students not only learn to code but also grow professionally by receiving the right guidance at each step of their career journey. We aim to bridge the gap between academic knowledge and industry requirements by fostering critical thinking and practical problem-solving skills.</p>
+        <p>Our vision is to provide students with the tools and knowledge needed to excel in their careers. We offer personalized learning paths, real-time leaderboard tracking, and AI-powered career guidance, all aimed at developing critical skills that will set students apart in the industry.</p>
 
-        <!-- Another image section -->
         <img src="https://via.placeholder.com/1000x500.png?text=Vision+and+Growth" alt="Vision and Growth">
 
         <div class="section-title">Key Features</div>
         <ul>
-            <li><strong>Personalized Learning Pathways:</strong> Receive custom learning paths designed to match your coding level and career goals.</li>
-            <li><strong>Real-Time Leaderboard:</strong> Track your coding performance and see how you rank compared to your peers in your class and institution.</li>
-            <li><strong>AI-Powered Career Guidance:</strong> Our AI suggests career paths based on your skills, coding progress, and interests, helping you make informed decisions.</li>
-            <li><strong>Mentorship Programs:</strong> Get connected with industry professionals and alumni mentors to gain valuable insights and career advice.</li>
-            <li><strong>Weekly Challenges:</strong> Participate in coding challenges to keep your skills sharp and boost your ranking on the leaderboard.</li>
+            <li><strong>Personalized Learning Pathways:</strong> Custom learning paths tailored to your coding and career goals.</li>
+            <li><strong>Real-Time Leaderboard:</strong> Track your coding performance and see how you rank among your peers.</li>
+            <li><strong>AI-Powered Career Guidance:</strong> Get career suggestions based on your skills and progress.</li>
+            <li><strong>Mentorship Programs:</strong> Connect with industry professionals and alumni for valuable insights.</li>
+            <li><strong>Weekly Challenges:</strong> Engage in coding challenges to sharpen your skills and boost your ranking.</li>
         </ul>
 
-        <!-- Another placeholder for an image -->
         <img src="https://via.placeholder.com/1000x500.png?text=Mentorship+Programs" alt="Mentorship Programs">
 
-        <div class="section-title">Join Our Community</div>
-        <p>Are you ready to take control of your academic and career journey? Join AIM today and unlock opportunities to grow, compete, and connect with the right mentors. We are here to guide you every step of the way!</p>
+        <!-- Call-to-action button -->
+        <a href="#" class="cta-button">Join Now</a>
 
-        <p>Together, let’s shape your future!</p>
+        <!-- Testimonial Section -->
+        <div class="testimonial-section">
+            <div class="testimonial">
+                <p>"AIM has helped me discover my true potential and has provided me with the guidance I needed to excel in coding!"</p>
+                <span>- John Doe, Computer Science Student</span>
+            </div>
+            <div class="testimonial">
+                <p>"The mentorship program was a game-changer for me. I received personalized career advice that helped me land my dream job!"</p>
+                <span>- Jane Smith, Software Engineer</span>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
