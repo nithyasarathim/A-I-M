@@ -43,12 +43,24 @@
             text-align: center;
             margin-bottom: 30px;
             font-size: 3em;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-100px); }
+            100% { opacity: 1; transform: translateX(0); }
         }
 
         p {
             margin-bottom: 25px;
             font-size: 1.2em;
             color: #2b2d42;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         .section-title {
@@ -57,12 +69,20 @@
             font-size: 1.6em;
             margin-top: 50px;
             margin-bottom: 25px;
+            text-align: center;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         ul {
             list-style-type: square;
             padding-left: 40px;
             margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         li {
@@ -77,6 +97,12 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
         }
 
         img:hover {
@@ -99,6 +125,12 @@
             width: 200px;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .cta-button:hover {
@@ -113,6 +145,7 @@
             margin-top: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            animation: fadeInUp 1.5s ease-in-out;
         }
 
         .testimonial {
@@ -214,7 +247,6 @@
                 <span>- Jane Smith, Software Engineer</span>
             </div>
         </div>
-
     </div>
 </body>
 </html>
